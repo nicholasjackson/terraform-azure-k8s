@@ -1,4 +1,6 @@
-provider "azurerm" {}
+provider "azurerm" {
+  version = "=1.5.0"
+}
 
 provider "kubernetes" {
   host                   = "${azurerm_kubernetes_cluster.k8s.kube_config.0.host}"
